@@ -1,9 +1,10 @@
-import DCArticleList from './dc-article-list'
+import CustomContainer from '@/components/atom/container'
+import ArticleList from '@/components/article-list/article-list'
 
-export default function ArticleList() {
+export default function Page() {
   return (
-    <>
-      <DCArticleList />
-    </>
+    <CustomContainer>
+      <ArticleList />
+    </CustomContainer>
   )
 }

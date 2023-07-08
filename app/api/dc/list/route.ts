@@ -1,4 +1,4 @@
-import { DCArticleModel } from '@/utils/model'
+import { DCArticleModel } from '@/utils/model/dc-model'
 import axios from 'axios'
 import cheerio from 'cheerio'
 import { NextRequest, NextResponse } from 'next/server'
