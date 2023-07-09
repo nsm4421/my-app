@@ -1,6 +1,6 @@
 // DC 게시글 목록 List
 export interface DCArticleModel {
-  gall_num: string // 게시글 id
+  gall_num: number // 게시글 id
   title: string // 게시글 제목
   author: string // 글쓴이 닉네임
   date: string // 작성일자
@@ -15,8 +15,8 @@ export const DCGalleryIDMapping = [
     label: '실베',
   },
   {
-    id: 'stream_new1',
-    label: '스트리머',
+    id: 'ib_new2',
+    label: '인방',
   },
   {
     id: 'leagueoflegends4',

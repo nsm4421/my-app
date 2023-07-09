@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
     // parse html
     let posts: DCArticleModel[] = []
     $('.gall_list .us-post').each((_, el) => {
-      const gall_num = $(el).find('.gall_num').text()
+      const gall_num = Number($(el).find('.gall_num').text())
       const title = $(el).find('.gall_tit').text().replace(/\t|\n/g, '').trim()
       const author = $(el)
         .find('.gall_writer')

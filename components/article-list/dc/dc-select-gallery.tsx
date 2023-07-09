@@ -10,17 +10,17 @@ interface Props {
 }
 /**
  * DC 갤러리 선택 버튼
- * @props id: string
+ * @props id : 갤러리 id(string)
  * @props setId: Dispatch<SetStateAction<string>>
- * @state 선택한 갤러리의 index
+ * @state gallery : 선택한 갤러리의 index
  */
 export default function DCSelectGallery(props: Props) {
-  const [selected, setSelected] = useState(0)
-  const handleClick = (idx: number) => () => setSelected(idx)
+  const [gallIdx, setGallIdx] = useState(0)
+  const handleClick = (idx: number) => () => setGallIdx(idx)
   useEffect(() => {
-    props.setId(DCGalleryIDMapping[selected].id ?? 0)
+    props.setId(DCGalleryIDMapping[gallIdx].id)
     return
-  }, [selected])
+  }, [gallIdx])
 
   return (
     <div className="w-full flex justify-start">
@@ -30,7 +30,7 @@ export default function DCSelectGallery(props: Props) {
           width={20}
           rounded={'md'}
           className={
-            (selected === idx ? 'bg-sky-600 text-slate-100' : 'text-gray-500') +
+            (gallIdx === idx ? 'bg-sky-600 text-slate-100' : 'text-gray-500') +
             ' hover:text-orange-500 mr-3'
           }
           color={'black'}
